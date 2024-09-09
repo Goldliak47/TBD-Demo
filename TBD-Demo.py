@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def test():
-    return "<p>This is a Trunk Based Testing Repo https://www.cncglobal.io</p>"
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
